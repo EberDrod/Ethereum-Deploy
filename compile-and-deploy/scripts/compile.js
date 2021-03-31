@@ -7,7 +7,7 @@ const contractPath = path.resolve(__dirname, "../contracts", "UsersContract.sol"
 const source = fs.readFileSync(contractPath, 'utf8');
 
 
-const { interface, bytecode } = solc.compile(source, 1).contracts[':UsersContract'];
+module.exports = solc.compile(source, 1).contracts[':UsersContract'];
 
-console.log(chalk.green(bytecode));
-console-log(chalk.cyan(interface));
+
+
